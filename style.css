@@ -13,7 +13,7 @@ body {
 }
 
 .semestre {
-  min-width: 220px;
+  min-width: 230px;
 }
 
 .ramo {
@@ -23,12 +23,14 @@ body {
   padding: 10px;
   margin: 8px 0;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .ramo.aprobado {
   background-color: #fde2e8;
   border-color: #f2b6c6;
 }
+
 .ramo.bloqueado {
   opacity: 0.4;
   cursor: not-allowed;
