@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #faf7f9;
+  text-align: center;
+  padding: 20px;
+}
+
+.contenedor {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.semestre {
+  min-width: 220px;
+}
+
+.ramo {
+  background-color: white;
+  border: 2px solid #f2cbd4;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.ramo.aprobado {
+  background-color: #fde2e8;
+  border-color: #f2b6c6;
+}
