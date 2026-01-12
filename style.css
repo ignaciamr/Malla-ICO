@@ -29,3 +29,7 @@ body {
   background-color: #fde2e8;
   border-color: #f2b6c6;
 }
+.ramo.bloqueado {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
