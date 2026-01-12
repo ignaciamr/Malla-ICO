@@ -2,105 +2,115 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Interactiva – Ingeniería Comercial</title>
+  <title>Malla Interactiva </title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Malla Ingeniería Comercial </h1>
-
+<h1>Malla Ingeniería Comercial</h1>
+<p></p>
 
 <div class="contenedor">
 
+  <!-- SEMESTRE I -->
   <div class="semestre">
     <h2>Semestre I</h2>
-    <div class="ramo" data-ramo="mate1" onclick="marcar(this)">Matemáticas I</div>
-    <div class="ramo" data-ramo="prog" onclick="marcar(this)">Programación</div>
-    <div class="ramo" onclick="marcar(this)">Fundamentos de Administración y Negocios I</div>
-    <div class="ramo" onclick="marcar(this)">Taller de Comunicación I</div>
-    <div class="ramo" onclick="marcar(this)">Inglés I</div>
+    <div class="ramo" data-id="mate1">Matemáticas I</div>
+    <div class="ramo" data-id="prog">Programación</div>
+    <div class="ramo" data-id="fan1">Fundamentos de Administración y Negocios I</div>
+    <div class="ramo" data-id="taller1">Taller de Comunicación I</div>
+    <div class="ramo" data-id="ing1">Inglés I</div>
   </div>
 
+  <!-- SEMESTRE II -->
   <div class="semestre">
     <h2>Semestre II</h2>
-    <div class="ramo" data-ramo="mate2" onclick="marcar(this)">Matemáticas II</div>
-    <div class="ramo" onclick="marcar(this)">Microeconomía I</div>
-    <div class="ramo" onclick="marcar(this)">Contabilidad I</div>
-    <div class="ramo" onclick="marcar(this)">Fundamentos de Administración y Negocios II</div>
-    <div class="ramo" onclick="marcar(this)">Inglés II</div>
+    <div class="ramo" data-id="mate2">Matemáticas II</div>
+    <div class="ramo" data-id="micro1">Microeconomía I</div>
+    <div class="ramo" data-id="cont1">Contabilidad I</div>
+    <div class="ramo" data-id="fan2">Fundamentos de Administración y Negocios II</div>
+    <div class="ramo" data-id="ing2">Inglés II</div>
   </div>
 
+  <!-- SEMESTRE III -->
   <div class="semestre">
     <h2>Semestre III</h2>
-    <div class="ramo" onclick="marcar(this)">Matemáticas III</div>
-    <div class="ramo" data-ramo="estad1" onclick="marcar(this)">Estadística I</div>
-    <div class="ramo" onclick="marcar(this)">Macroeconomía I</div>
-    <div class="ramo" onclick="marcar(this)">Tecnología y Empresa</div>
-    <div class="ramo" onclick="marcar(this)">Taller de Comunicación II</div>
-    <div class="ramo" onclick="marcar(this)">Inglés III</div>
+    <div class="ramo" data-id="mate3">Matemáticas III</div>
+    <div class="ramo" data-id="estad1">Estadística I</div>
+    <div class="ramo" data-id="macro1">Macroeconomía I</div>
+    <div class="ramo" data-id="tec">Tecnología y Empresa</div>
+    <div class="ramo" data-id="taller2">Taller de Comunicación II</div>
+    <div class="ramo" data-id="ing3">Inglés III</div>
   </div>
+
+  <!-- SEMESTRE IV -->
   <div class="semestre">
     <h2>Semestre IV</h2>
-    <div class="ramo" onclick="marcar(this)">Estadística II</div>
-    <div class="ramo" onclick="marcar(this)">Microeconomía II</div>
-    <div class="ramo" onclick="marcar(this)">Contabilidad II</div>
-    <div class="ramo" onclick="marcar(this)">Personas y Equipos</div>
-    <div class="ramo" onclick="marcar(this)">Taller de Liderazgo y Trabajo en Equipo</div>
-    <div class="ramo" onclick="marcar(this)">Inglés IV</div>
+    <div class="ramo" data-id="estad2">Estadística II</div>
+    <div class="ramo" data-id="micro2">Microeconomía II</div>
+    <div class="ramo" data-id="cont2">Contabilidad II</div>
+    <div class="ramo" data-id="personas">Personas y Equipos</div>
+    <div class="ramo" data-id="liderazgo">Taller de Liderazgo y Trabajo en Equipo</div>
+    <div class="ramo" data-id="ing4">Inglés IV</div>
   </div>
 
+  <!-- SEMESTRE V -->
   <div class="semestre">
     <h2>Semestre V</h2>
-    <div class="ramo" onclick="marcar(this)">Econometría I</div>
-    <div class="ramo" onclick="marcar(this)">Macroeconomía II</div>
-    <div class="ramo" onclick="marcar(this)">Finanzas I</div>
-    <div class="ramo" onclick="marcar(this)">Estrategia</div>
-    <div class="ramo" onclick="marcar(this)">Taller de Ética en la Toma de Decisiones</div>
-    <div class="ramo" onclick="marcar(this)">Inglés V</div>
+    <div class="ramo" data-id="eco1">Econometría I</div>
+    <div class="ramo" data-id="macro2">Macroeconomía II</div>
+    <div class="ramo" data-id="fin1">Finanzas I</div>
+    <div class="ramo" data-id="estrategia">Estrategia</div>
+    <div class="ramo" data-id="etica">Taller de Ética en la Toma de Decisiones</div>
+    <div class="ramo" data-id="ing5">Inglés V</div>
   </div>
 
+  <!-- SEMESTRE VI -->
   <div class="semestre">
     <h2>Semestre VI</h2>
-    <div class="ramo" onclick="marcar(this)">Ciencia de Datos</div>
-    <div class="ramo" onclick="marcar(this)">Globalización y Sustentabilidad</div>
-    <div class="ramo" onclick="marcar(this)">Marketing</div>
-    <div class="ramo" onclick="marcar(this)">Gestión de Operaciones</div>
-    <div class="ramo" onclick="marcar(this)">CFG I</div>
+    <div class="ramo" data-id="cd">Ciencia de Datos</div>
+    <div class="ramo" data-id="global">Globalización y Sustentabilidad</div>
+    <div class="ramo" data-id="marketing">Marketing</div>
+    <div class="ramo" data-id="operaciones">Gestión de Operaciones</div>
+    <div class="ramo" data-id="cfg1">CFG I</div>
   </div>
 
+  <!-- SEMESTRE VII -->
   <div class="semestre">
     <h2>Semestre VII</h2>
-    <div class="ramo" onclick="marcar(this)">Matemáticas para Economía</div>
-    <div class="ramo" onclick="marcar(this)">Econometría II</div>
-    <div class="ramo" onclick="marcar(this)">Teoría de Juego</div>
-    <div class="ramo" onclick="marcar(this)">Crecimiento y Desarrollo Económico</div>
-    <div class="ramo" onclick="marcar(this)">CFG II</div>
+    <div class="ramo" data-id="mateeco">Matemáticas para Economía</div>
+    <div class="ramo" data-id="eco2">Econometría II</div>
+    <div class="ramo" data-id="juegos">Teoría de Juego</div>
+    <div class="ramo" data-id="crecimiento">Crecimiento y Desarrollo Económico</div>
+    <div class="ramo" data-id="cfg2">CFG II</div>
   </div>
 
+  <!-- SEMESTRE VIII -->
   <div class="semestre">
     <h2>Semestre VIII</h2>
-    <div class="ramo" onclick="marcar(this)">Ciencia de Datos para Economía</div>
-    <div class="ramo" onclick="marcar(this)">Economía de la Información y Competencia Imperfecta</div>
-    <div class="ramo" onclick="marcar(this)">Política Económica</div>
-    <div class="ramo" onclick="marcar(this)">Taller de Simulación Económica</div>
-    <div class="ramo" onclick="marcar(this)">CFG III</div>
+    <div class="ramo" data-id="cd2">Ciencia de Datos para Economía</div>
+    <div class="ramo" data-id="info">Economía de la Información y Competencia Imperfecta</div>
+    <div class="ramo" data-id="politica">Política Económica</div>
+    <div class="ramo" data-id="simulacion">Taller de Simulación Económica</div>
+    <div class="ramo" data-id="cfg3">CFG III</div>
   </div>
 
+  <!-- SEMESTRE IX -->
   <div class="semestre">
     <h2>Semestre IX</h2>
-    <div class="ramo" onclick="marcar(this)">Optativo I</div>
-    <div class="ramo" onclick="marcar(this)">Optativo II</div>
-    <div class="ramo" onclick="marcar(this)">Desarrollo de Carrera y E-portafolio</div>
-    <div class="ramo" onclick="marcar(this)">CFG IV</div>
+    <div class="ramo" data-id="opt1">Optativo I</div>
+    <div class="ramo" data-id="opt2">Optativo II</div>
+    <div class="ramo" data-id="portafolio">Desarrollo de Carrera y E-portafolio</div>
+    <div class="ramo" data-id="cfg4">CFG IV</div>
   </div>
 
+  <!-- SEMESTRE X -->
   <div class="semestre">
     <h2>Semestre X</h2>
-    <div class="ramo" onclick="marcar(this)">Optativo III</div>
-    <div class="ramo" onclick="marcar(this)">Optativo IV</div>
-    <div class="ramo" onclick="marcar(this)">Práctica Profesional</div>
+    <div class="ramo" data-id="opt3">Optativo III</div>
+    <div class="ramo" data-id="opt4">Optativo IV</div>
+    <div class="ramo" data-id="practica">Práctica Profesional</div>
   </div>
-
 
 </div>
 
