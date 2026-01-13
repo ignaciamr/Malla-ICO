@@ -35,14 +35,17 @@ function actualizarBloqueos() {
     const id = ramo.dataset.id;
     const reqs = prerequisitos[id];
 
-    if (!reqs) return;
+    if (!reqs) {
+      ramo.classList.remove("bloqueado");
+      return;
+    }
 
-    const desbloqueado = reqs.every(req => {
+    const habilitado = reqs.every(req => {
       const r = document.querySelector(`.ramo[data-id="${req}"]`);
       return r && r.classList.contains("aprobado");
     });
 
-    ramo.classList.toggle("bloqueado", !desbloqueado);
+    ramo.classList.toggle("bloqueado", !habilitado);
   });
 }
 
