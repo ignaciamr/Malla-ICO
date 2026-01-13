@@ -1,24 +1,4 @@
 const prerequisitos = {
-  mate2: ["mate1"]
-};
-
-function marcar(ramo) {
-  const id = ramo.dataset.id;
-  const reqs = prerequisitos[id];
-
-  if (reqs) {
-    for (let req of reqs) {
-      const previo = document.querySelector(`.ramo[data-id="${req}"]`);
-      if (!previo.classList.contains("aprobado")) {
-        return; // NO se marca
-      }
-    }
-  }
-
-  ramo.classList.toggle("aprobado");
-}
-
-const prerequisitos = {
   mate2: ["mate1"],
   estad1: ["prog", "mate2"],
   mate3: ["mate2"],
@@ -48,33 +28,36 @@ const prerequisitos = {
   simulacion: ["mateeco", "macro2"]
 };
 
-const ramos = document.querySelectorAll(".ramo");
+function marcar(ramo) {
+  const id = ramo.dataset.id;
+  const reqs = prerequisitos[id];
 
-function actualizarBloqueos() {
-  ramos.forEach(ramo => {
-    const id = ramo.dataset.id;
-    const reqs = prerequisitos[id];
-
-    if (!reqs) {
-      ramo.classList.remove("bloqueado");
-      return;
+  if (reqs) {
+    for (let r of reqs) {
+      const previo = document.querySelector(`.ramo[data-id="${r}"]`);
+      if (!previo.classList.contains("aprobado")) return;
     }
+  }
 
-    const habilitado = reqs.every(req => {
-      const r = document.querySelector(`.ramo[data-id="${req}"]`);
-      return r && r.classList.contains("aprobado");
-    });
+  ramo.classList.toggle("aprobado");
+  guardar();
+}
 
-    ramo.classList.toggle("bloqueado", !habilitado);
+function guardar() {
+  const aprobados = [];
+  document.querySelectorAll(".ramo.aprobado").forEach(r => {
+    aprobados.push(r.dataset.id);
+  });
+  localStorage.setItem("mallaAprobados", JSON.stringify(aprobados));
+}
+
+function cargar() {
+  const datos = JSON.parse(localStorage.getItem("mallaAprobados")) || [];
+  datos.forEach(id => {
+    const ramo = document.querySelector(`.ramo[data-id="${id}"]`);
+    if (ramo) ramo.classList.add("aprobado");
   });
 }
 
-ramos.forEach(ramo => {
-  ramo.addEventListener("click", () => {
-    if (ramo.classList.contains("bloqueado")) return;
-    ramo.classList.toggle("aprobado");
-    actualizarBloqueos();
-  });
-});
+cargar();
 
-actualizarBloqueos();
