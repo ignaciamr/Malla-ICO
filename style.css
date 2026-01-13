@@ -7,23 +7,28 @@ body {
 
 .contenedor {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   overflow-x: auto;
-  padding: 20px;
+  padding: 30px;
 }
 
 .semestre {
-  min-width: 230px;
+  min-width: 280px;
 }
 
 .ramo {
   background-color: white;
   border: 2px solid #f2cbd4;
-  border-radius: 12px;
-  padding: 10px;
-  margin: 8px 0;
+  border-radius: 14px;
+  padding: 16px 14px;
+  margin: 12px 0;
   cursor: pointer;
+  font-size: 15px;
   transition: 0.2s;
+}
+
+.ramo:hover {
+  transform: scale(1.02);
 }
 
 .ramo.aprobado {
@@ -32,6 +37,6 @@ body {
 }
 
 .ramo.bloqueado {
-  opacity: 0.4;
+  opacity: 0.35;
   cursor: not-allowed;
 }
