@@ -1,4 +1,24 @@
 const prerequisitos = {
+  mate2: ["mate1"]
+};
+
+function marcar(ramo) {
+  const id = ramo.dataset.id;
+  const reqs = prerequisitos[id];
+
+  if (reqs) {
+    for (let req of reqs) {
+      const previo = document.querySelector(`.ramo[data-id="${req}"]`);
+      if (!previo.classList.contains("aprobado")) {
+        return; // NO se marca
+      }
+    }
+  }
+
+  ramo.classList.toggle("aprobado");
+}
+
+const prerequisitos = {
   mate2: ["mate1"],
   estad1: ["prog", "mate2"],
   mate3: ["mate2"],
