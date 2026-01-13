@@ -1,23 +1,28 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   background-color: #fff6f8;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  color: #333;
 }
 
 h1 {
   margin-bottom: 5px;
 }
 
+.subtitulo {
+  margin-bottom: 25px;
+}
+
 .progreso {
-  max-width: 400px;
-  margin: 20px auto 40px;
+  max-width: 420px;
+  margin: 0 auto 35px;
 }
 
 .barra {
   width: 100%;
   height: 18px;
-  background-color: #f2cfd8;
+  background-color: #f1ccd6;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -25,24 +30,24 @@ h1 {
 #barra-progreso {
   height: 100%;
   width: 0%;
-  background-color: #e8a8b9;
+  background-color: #e6a6b7;
   transition: width 0.3s;
 }
 
 #texto-progreso {
   margin-top: 8px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 #malla {
   display: flex;
-  gap: 40px;
+  gap: 45px;
   overflow-x: auto;
   padding: 20px;
 }
 
 .semestre {
-  min-width: 320px;
+  min-width: 330px;
 }
 
 .semestre h2 {
@@ -50,17 +55,18 @@ h1 {
 }
 
 .ramo {
-  background-color: white;
+  background-color: #ffffff;
   border: 2px solid #f1c6d1;
   border-radius: 18px;
   padding: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .ramo.aprobado {
   background-color: #fde3ea;
-  border-color: #e8a8b9;
+  border-color: #e6a6b7;
 }
 
 .ramo.bloqueado {
